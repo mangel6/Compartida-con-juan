@@ -58,6 +58,7 @@ const validarFormulario = (e) => {
     contactos.push(datos);
     console.log(contactos);
     formulario.reset();
+    console.out("hola");
 }
 //Programa principal
 
