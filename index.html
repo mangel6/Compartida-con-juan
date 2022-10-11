@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduction JS</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction JS</title>
-
-    <link rel="preload" href="css/normalize.css" as="style">
-    <!--Para que el sitio web se comporte mas rapido-->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link href="css/styles.css" rel="stylesheet">
-
-
-</head>
-
-<body>
-    <header>
-        <h1 id="titulo">Juan te amo</h1>
-    </header>
+        <link rel="preload" href="css/normalize.css" as="style"> <!--Para que el sitio web se comporte mas rapido-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/tailwind.min.css">
+        <link rel="preload" href="css/styles.css" as="style">
+        <link href="css/styles.css" rel="stylesheet">
 
 
-    <!-- Inicio Formulario -->
+    </head>
+    <body>
+        <header>
+            <h1 class="titulo">Sistema Administracion de Contactos <span>Desarrollo WEB</h1></span></h1>
+        </header>
+        <!--configuracion de la barra de navegacion-->
+        <div class="nav-bg">
+            <nav class="navegacion-principal contenedor">
+                <a href="index.html">Inicio</a>
+                <a id="lista-contacto" href="#">Lista Contactos</a>
+            </nav>
+        </div>
 
-    <main main-edicion class="contenedor sombra">
+        <!-- Inicio Formulario -->
 
-        <section>
-
-            <form action="" class="formulario">
+        <main main-edicion class="contenedor sombra">
+            <section id="form-contacto">   
+                <form action="" 
+                      class="formulario"
+                >
                 <fieldset>
                     <legend>Contactenos llenado todos los campos</legend>
                     <div class="contenedor-campos">
@@ -49,29 +53,34 @@
                         </div>
                         <div class="campos">
                             <label>Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" class="input-text"
-                                placeholder="Tu mensaje"></textarea>
+                            <textarea id="mensaje" name="mensaje" class="input-text" placeholder="Tu mensaje"></textarea>
                         </div>
+                    </div> 
+                    
+                    
+                    <!-- Spinner -->
+                    <div id="contenedor-spinner">
+                        
                     </div>
+                    <!-- Fin Spinner -->
+
                     <div class="alinear-derecha flex">
                         <input class="boton w-100" type="submit" value="Enviar">
                     </div>
                 </fieldset>
-                <!--  -->
-            </form>
+                    <!--  -->
+                </form>
+    
+            </section>
+        </main>
 
-        </section>
-    </main>
+        <footer class="fooster">
+            <p>Todos los derechos reservados</p>
+        </footer>
 
-    <footer class="fooster">
-        <p>Todos los derechos reservados</p>
-    </footer>
+        <!-- Fin Formulario -->
 
-
-    <!-- Fin Formulario -->
-
-
-    <script src="./js/index.js" type="text/javascript"></script>
-</body>
-
+        <script src="./js/index.js" type="module"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
 </html>
